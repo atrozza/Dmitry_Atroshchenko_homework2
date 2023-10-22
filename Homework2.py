@@ -111,9 +111,9 @@ def uniques(repeating_string):
 # Проверка рассчитана только на английские буквы.
 def count_string_capitalization(mixed_string):
     if ('[' in mixed_string and ']' in mixed_string) or mixed_string == 'True':
-        print(False)
+        return False
     elif mixed_string.replace(".", "").isdigit():
-        print(False)
+        return False
     else:
         count_upper_letter = 0
         count_lower_letter = 0
