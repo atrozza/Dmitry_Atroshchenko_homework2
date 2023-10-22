@@ -76,7 +76,6 @@ def triangle(a, b, c):
 # Пример: если введено "This is a sample sentence where the longest word is in the middle!",
 # то надо вернуть "sentence"
 def longest_word(sentence):
-
     if not sentence:
         return False
     elif (sentence.replace(".", "").isdigit()):
@@ -91,7 +90,6 @@ def longest_word(sentence):
         max_length = max(len(word) for word in words)
         longest_words = [word for word in words if len(word) == max_length]
         last_longest_word = longest_words[-1]
-
         return last_longest_word
 
 
@@ -99,7 +97,6 @@ def longest_word(sentence):
 # Вводится строка. Требуется удалить из нее повторяющиеся символы и все пробелы.
 # Например, если было введено "abc cde def", то должно быть выведено "abcdef".
 def uniques(repeating_string):
-
     if not repeating_string:
         return False
     elif (repeating_string.replace(".", "").isdigit()):
@@ -107,14 +104,12 @@ def uniques(repeating_string):
     else:
         no_space_string = repeating_string.replace(" ", "")
         result = "".join(sorted(set(no_space_string), key=no_space_string.index))
-
         return result
 
 
 # Посчитать количество строчных (маленьких) и прописных (больших) букв в введенной строке.
 # Проверка рассчитана только на английские буквы.
 def count_string_capitalization(mixed_string):
-
     if ('[' in mixed_string and ']' in mixed_string) or mixed_string == 'True':
         print(False)
     elif mixed_string.replace(".", "").isdigit():
@@ -122,12 +117,10 @@ def count_string_capitalization(mixed_string):
     else:
         count_upper_letter = 0
         count_lower_letter = 0
-
         for char in mixed_string:
             if char.isalpha():
                 if char.isupper():
                     count_upper_letter += 1
                 elif char.islower():
                     count_lower_letter += 1
-
         return "В строке '" + mixed_string + "' " + str(count_upper_letter) + " большие и " + str(count_lower_letter) + " маленькие буквы"
