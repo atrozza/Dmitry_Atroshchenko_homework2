@@ -1,4 +1,4 @@
 # Dmitry Atroshchenko
 # 22/10/2023
-# Homework2
+# Description: Homework 2
 # My version python 3.11
